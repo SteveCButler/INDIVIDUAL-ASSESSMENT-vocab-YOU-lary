@@ -1,18 +1,20 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import loginButton from '../components/loginButton';
-import logoutButton from '../components/logoutButton';
+import splash from '../pages/splash';
 import client from './client';
+import startApp from './startApp';
 
 const ViewDirectorBasedOnUserAuthStatus = () => {
   firebase.initializeApp(client);
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
+      console.warn('Logged in');
       // person is logged in do something...
-      logoutButton();
+      startApp();
     } else {
       // person is NOT logged in
-      loginButton();
+      console.warn('NOT logged in');
+      splash();
     }
   });
 };
