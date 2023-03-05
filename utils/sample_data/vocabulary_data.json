@@ -1,0 +1,12 @@
+{
+ "1": {
+    "title": "Array Methods",
+    "description": "Methods used to deal with arrays in JavaScript",
+    "langTech": "JavaScript",
+  },
+  "2": {
+     "title": "Async/Await",
+    "description": "Used to deal with stuff in JavaScript",
+    "langTech": "JavaScript",
+  },
+}

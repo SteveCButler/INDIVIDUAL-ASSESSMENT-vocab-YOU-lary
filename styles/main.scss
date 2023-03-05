@@ -1,10 +1,20 @@
-@import "~@fortawesome/fontawesome-free/css/all.min.css";
-@import "~bootstrap/scss/bootstrap";
-
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import '~bootstrap/scss/bootstrap';
 
 body {
-  background-color: antiquewhite;
-  color: brown;
+  background-color: lightgrey;
+  color: darkslategrey;
   text-align: center;
   margin-top: 100px;
+}
+#view {
+  display: flex;
+  gap: 1.5em;
+  justify-content: center;
+  padding: 2em;
+}
+nav img {
+  width: 80px;
+  height: 60px;
+  border-radius: 10px;
 }
