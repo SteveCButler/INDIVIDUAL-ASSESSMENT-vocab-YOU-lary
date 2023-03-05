@@ -2,7 +2,7 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
-  background-color: lightgrey;
+  background-color: rgb(141, 139, 139);
   color: darkslategrey;
   text-align: center;
   margin-top: 100px;
@@ -17,4 +17,7 @@ nav img {
   width: 80px;
   height: 60px;
   border-radius: 10px;
+}
+#filterButtonContainer button {
+  padding: 3px 20px;
 }
