@@ -4,8 +4,9 @@ const buildDom = () => {
   const domString = `
   <div id="navigation"></div>
   <div id="main-container">
+  <div id="filterButtonContainer" class="d-flex justify-content-center gap-5"></div>
   <div id="form-container"></div>
-  <div id="view"><h1>STEVE</h1></div>
+  <div id="view"></div>
   </div>
   `;
 
