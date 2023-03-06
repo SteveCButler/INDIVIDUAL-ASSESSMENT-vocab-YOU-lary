@@ -21,3 +21,17 @@ nav img {
 #filterButtonContainer button {
   padding: 3px 20px;
 }
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 100px;
+  align-content: center;
+}
+
+#form-container {
+  width: 60%;
+  margin: 2em auto;
+  justify-content: center;
+}
