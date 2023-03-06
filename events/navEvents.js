@@ -19,6 +19,7 @@ const navEvents = () => {
         showVocab(data);
       });
     }
+
     if (e.target.id.includes('google-auth')) {
       clearDomOnLogout();
       signOut();

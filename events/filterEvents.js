@@ -1,4 +1,4 @@
-import { filterByLangTech } from '../api/vocabRequests';
+import { filterByLangTech, getVocabulary } from '../api/vocabRequests';
 import showVocab from '../pages/showVocab';
 
 const filterEvents = () => {
@@ -17,6 +17,11 @@ const filterEvents = () => {
 
     if (e.target.id.includes('reactFilter')) {
       filterByLangTech('React').then(showVocab);
+    }
+    if (e.target.id.includes('allCards')) {
+      getVocabulary().then((data) => {
+        showVocab(data);
+      });
     }
   });
 };

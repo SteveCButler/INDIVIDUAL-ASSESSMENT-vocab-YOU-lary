@@ -1,8 +1,8 @@
 import renderToDom from '../utils/renderToDom';
-import clearDom from '../utils/clearDom';
+// import clearDom from '../utils/clearDom';
 
 const createCardForm = (obj = {}) => {
-  clearDom();
+  document.querySelector('#filterButtonContainer').innerHTML = '';
   const domString = ` 
   <form id="${obj.firebaseKey ? `update-card--${obj.firebaseKey}` : 'submit-card'
 }" class="mb-4">
