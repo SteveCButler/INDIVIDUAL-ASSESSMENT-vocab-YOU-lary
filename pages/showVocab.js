@@ -1,8 +1,8 @@
-// import clearDom from '../utils/clearDom';
+import clearDom from '../utils/clearDom';
 import renderToDom from '../utils/renderToDom';
 
 const showVocab = (array) => {
-  // clearDom();
+  clearDom();
 
   let domString = '';
   array.forEach((item) => {
