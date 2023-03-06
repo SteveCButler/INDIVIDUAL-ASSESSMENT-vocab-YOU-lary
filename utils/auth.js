@@ -8,7 +8,6 @@ const signIn = () => {
 };
 
 const signOut = () => {
-  console.warn('SignOUT');
   // clearDomOnLogout();
   firebase.auth().signOut();
 };

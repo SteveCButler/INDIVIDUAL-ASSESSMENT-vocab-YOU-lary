@@ -3,6 +3,8 @@ import clearDom from '../utils/clearDom';
 import filterButtons from '../components/filterButtons';
 import { getVocabulary } from '../api/vocabRequests';
 import showVocab from '../pages/showVocab';
+import { signOut } from '../utils/auth';
+import clearDomOnLogout from '../utils/clearDomOnLogout';
 
 const navEvents = () => {
   document.querySelector('#navigation').addEventListener('click', (e) => {
@@ -16,6 +18,10 @@ const navEvents = () => {
       getVocabulary().then((data) => {
         showVocab(data);
       });
+    }
+    if (e.target.id.includes('google-auth')) {
+      clearDomOnLogout();
+      signOut();
     }
   });
 };
