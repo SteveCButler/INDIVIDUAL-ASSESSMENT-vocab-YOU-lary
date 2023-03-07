@@ -10,7 +10,7 @@ const showVocab = (array) => {
   <div class="card-body">
     <h5 class="card-title">${item.title}</h5>
      <h6 class="card-subtitle mb-2 text-muted">${item.langTech}</h6>
-    <p class="card-text">${item.description}</p>
+    <p class="card-text">${item.definition}</p>
     <a href="#" class="card-link">Edit</a>
     <a href="#" class="card-link">Delete</a>
   </div>
