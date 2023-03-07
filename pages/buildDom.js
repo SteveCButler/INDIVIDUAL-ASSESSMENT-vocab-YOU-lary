@@ -6,7 +6,7 @@ const buildDom = () => {
   <div id="main-container">
   <div id="filterButtonContainer" class="d-flex justify-content-center gap-5"></div>
   <div id="form-container"></div>
-  <div id="view"></div>
+  <div id="view" class="d-flex flex-wrap gap-3 justify-content-center"></div>
   </div>
   `;
 
