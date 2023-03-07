@@ -18,9 +18,9 @@ const formEvents = () => {
         submitTime,
         uid: '',
       };
+      console.warn(payload);
       createVocabulary(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
-        console.warn('patchPayload', patchPayload);
         updateVocabulary(patchPayload).then(() => {
           getVocabulary().then(showVocab);
         });

@@ -8,16 +8,16 @@ import filterEvents from '../events/filterEvents';
 import navEvents from '../events/navEvents';
 import formEvents from '../events/formEvents';
 
-const startApp = () => {
+const startApp = (user) => {
   buildDom();
   navBar();
   logoutButton();
-  navEvents();
-  formEvents();
+  navEvents(user);
+  formEvents(user);
   filterButtons();
   filterEvents();
 
-  getVocabulary().then((data) => {
+  getVocabulary(user.uid).then((data) => {
     showVocab(data);
   });
 };
