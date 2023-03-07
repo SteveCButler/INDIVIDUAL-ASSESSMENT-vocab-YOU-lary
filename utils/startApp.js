@@ -6,14 +6,16 @@ import navBar from '../components/navBar';
 import filterButtons from '../components/filterButtons';
 import filterEvents from '../events/filterEvents';
 import navEvents from '../events/navEvents';
+import formEvents from '../events/formEvents';
 
 const startApp = () => {
   buildDom();
   navBar();
+  logoutButton();
   navEvents();
+  formEvents();
   filterButtons();
   filterEvents();
-  logoutButton();
 
   getVocabulary().then((data) => {
     showVocab(data);

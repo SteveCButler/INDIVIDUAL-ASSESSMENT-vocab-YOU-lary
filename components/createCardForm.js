@@ -1,33 +1,30 @@
 import renderToDom from '../utils/renderToDom';
-import clearDom from '../utils/clearDom';
+// import clearDom from '../utils/clearDom';
 
-const createCardForm = (obj = {}) => {
-  clearDom();
+const createCardForm = () => {
+  document.querySelector('#filterButtonContainer').innerHTML = '';
   const domString = ` 
-  <form id="${obj.firebaseKey ? `update-card--${obj.firebaseKey}` : 'submit-card'
-}" class="mb-4">
+     <form id="submit-card-form" class="mb-4">
       <div class="form-group">
         <label for="title">Title</label>
-        <input type="text" class="form-control" id="title" placeholder="Title" value="${obj.title || ''
-}" required>
+        <input type="text" class="form-control" id="title" placeholder="Title" value="" required>
       </div>
       <div class="form-group">
-        <label for="description">Definition</label>
-        <input type="text" class="form-control" id="description" placeholder="Definition" value="${obj.definition || ''
-}" required>
+        <label for="definition">Definition</label>
+        <input type="text" class="form-control" id="definition" placeholder="Definition" value="" required>
       </div>
       <div class="form-group p-5">
-        <select class="form-select" aria-label="Language select">
+        <select class="form-select" id="languageSelect" aria-label="Language select">
           <option selected>Select Language</option>
-          <option value="${obj.langTech || 'HTML'}">HTML</option>
-          <option value="${obj.langTech || 'CSS'}">CSS</option>
-          <option value="${obj.langTech || 'Javascript'}">Javascript</option>
-          <option value="${obj.langTech || 'React'}">React</option>
+          <option value="HTML">HTML</option>
+          <option value="CSS">CSS</option>
+          <option value="Javascript">Javascript</option>
+          <option value="React">React</option>
         </select required>
         
       </div>
       
-      <button type="submit" class="btn btn-primary mt-3">Submit Vocab</button>
+      <button type="submit" class="btn btn-secondary mt-3">Submit Vocab</button>
     </form>
   `;
 
