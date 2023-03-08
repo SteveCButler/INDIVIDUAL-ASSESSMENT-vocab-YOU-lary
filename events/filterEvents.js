@@ -1,25 +1,25 @@
 import { filterByLangTech, getVocabulary } from '../api/vocabRequests';
 import showVocab from '../pages/showVocab';
 
-const filterEvents = () => {
+const filterEvents = (uid) => {
   document.querySelector('#filterButtonContainer').addEventListener('click', (e) => {
     if (e.target.id.includes('htmlFilter')) {
-      filterByLangTech('HTML').then(showVocab);
+      filterByLangTech('HTML', uid).then(showVocab);
     }
 
     if (e.target.id.includes('cssFilter')) {
-      filterByLangTech('CSS').then(showVocab);
+      filterByLangTech('CSS', uid).then(showVocab);
     }
 
     if (e.target.id.includes('javascriptFilter')) {
-      filterByLangTech('Javascript').then(showVocab);
+      filterByLangTech('Javascript', uid).then(showVocab);
     }
 
     if (e.target.id.includes('reactFilter')) {
-      filterByLangTech('React').then(showVocab);
+      filterByLangTech('React', uid).then(showVocab);
     }
     if (e.target.id.includes('allCards')) {
-      getVocabulary().then((data) => {
+      getVocabulary(uid).then((data) => {
         showVocab(data);
       });
     }

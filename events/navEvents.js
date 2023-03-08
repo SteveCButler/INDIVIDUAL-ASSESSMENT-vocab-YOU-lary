@@ -6,7 +6,7 @@ import showVocab from '../pages/showVocab';
 import { signOut } from '../utils/auth';
 import clearDomOnLogout from '../utils/clearDomOnLogout';
 
-const navEvents = () => {
+const navEvents = (uid) => {
   document.querySelector('#navigation').addEventListener('click', (e) => {
     if (e.target.id.includes('createEntry')) {
       clearDom();
@@ -15,7 +15,7 @@ const navEvents = () => {
     if (e.target.id.includes('home')) {
       clearDom();
       filterButtons();
-      getVocabulary().then((data) => {
+      getVocabulary(uid).then((data) => {
         showVocab(data);
       });
     }
