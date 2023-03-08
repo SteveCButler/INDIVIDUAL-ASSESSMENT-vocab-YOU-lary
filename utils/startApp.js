@@ -12,10 +12,10 @@ const startApp = (user) => {
   buildDom();
   navBar();
   logoutButton();
-  navEvents(user);
-  formEvents(user);
+  navEvents(user.uid);
+  formEvents(user.uid);
   filterButtons();
-  filterEvents();
+  filterEvents(user.uid);
 
   getVocabulary(user.uid).then((data) => {
     showVocab(data);

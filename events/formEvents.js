@@ -3,7 +3,7 @@
 import { createVocabulary, updateVocabulary, getVocabulary } from '../api/vocabRequests';
 import showVocab from '../pages/showVocab';
 
-const formEvents = () => {
+const formEvents = (uid) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
     if (e.target.id.includes('submit-card')) {
@@ -16,13 +16,12 @@ const formEvents = () => {
         definition: document.querySelector('#definition').value,
         langTech: document.querySelector('#languageSelect').value,
         submitTime,
-        uid: '',
+        uid: `${uid}`,
       };
-      console.warn(payload);
       createVocabulary(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateVocabulary(patchPayload).then(() => {
-          getVocabulary().then(showVocab);
+          getVocabulary(uid).then(showVocab);
         });
       });
     }
