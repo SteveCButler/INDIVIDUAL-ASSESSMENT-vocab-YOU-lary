@@ -12,6 +12,11 @@ const showVocab = (array) => {
     <h5 class="card-title">${item.title}</h5>
      <h6 class="card-subtitle mb-2 text-muted">${item.langTech}</h6>
     <p class="card-text">${item.definition}</p>
+    <hr>
+    <p>Created: ${item.submitTime}</p>
+    <!-- <p>UserID: ${item.uid}<p> -->
+    <hr>
+  
    <button class="btn"><i id="edit-book-btn--${item.firebaseKey}" class="fas fa-edit"></i></button>
             <button class="btn"><i id="delete-book-btn--${item.firebaseKey}" class="fas fa-trash-alt"></i></button>
   </div>

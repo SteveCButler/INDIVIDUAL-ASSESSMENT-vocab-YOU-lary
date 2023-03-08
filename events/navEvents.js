@@ -15,9 +15,7 @@ const navEvents = (uid) => {
     if (e.target.id.includes('home')) {
       clearDom();
       filterButtons();
-      getVocabulary(uid).then((data) => {
-        showVocab(data);
-      });
+      getVocabulary(uid).then(showVocab);
     }
 
     if (e.target.id.includes('google-auth')) {
