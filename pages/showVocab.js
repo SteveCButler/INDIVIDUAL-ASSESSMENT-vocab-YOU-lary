@@ -8,19 +8,16 @@ const showVocab = (array) => {
   let domString = '';
   array.forEach((item) => {
     domString += `<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">${item.title}</h5>
-     <h6 class="card-subtitle mb-2 text-muted">${item.langTech}</h6>
-    <p class="card-text">${item.definition}</p>
-    <hr>
-    <p>Created: ${item.submitTime}</p>
-    <!-- <p>UserID: ${item.uid}<p> -->
-    <hr>
-  
-   <button class="btn"><i id="edit-book-btn--${item.firebaseKey}" class="fas fa-edit"></i></button>
-            <button class="btn"><i id="delete-book-btn--${item.firebaseKey}" class="fas fa-trash-alt"></i></button>
-  </div>
-</div>`;
+    <div class="card-body ">
+      <h5 class="card-title">${item.title}</h5>
+      <hr>
+      <p class="card-text">${item.definition}</p>
+      <button class="btn"><i id="edit-book-btn--${item.firebaseKey}" class="fas fa-edit"></i></button>
+      <button class="btn"><i id="delete-book-btn--${item.firebaseKey}" class="fas fa-trash-alt"></i></button>
+      <hr>
+      <h6 class="card-subtitle mb-2 text-muted">${item.langTech}</h6>
+      </div>
+    </div>`;
 
     renderToDom('#view', domString);
   });
