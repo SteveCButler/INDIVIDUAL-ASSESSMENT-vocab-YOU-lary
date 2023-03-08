@@ -7,6 +7,7 @@ import filterButtons from '../components/filterButtons';
 import filterEvents from '../events/filterEvents';
 import navEvents from '../events/navEvents';
 import formEvents from '../events/formEvents';
+import domEvents from '../events/domEvents';
 
 const startApp = (user) => {
   buildDom();
@@ -16,6 +17,7 @@ const startApp = (user) => {
   formEvents(user.uid);
   filterButtons();
   filterEvents(user.uid);
+  domEvents(user.uid);
 
   getVocabulary(user.uid).then((data) => {
     showVocab(data);

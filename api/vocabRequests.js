@@ -2,19 +2,7 @@ import client from '../utils/client';
 
 const endpoint = client.databaseURL;
 
-// const getVocabulary = () => new Promise((resolve, reject) => {
-//   fetch(`${endpoint}/vocabulary.json`, {
-//     method: 'GET',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//   })
-//     .then((response) => response.json())
-//     .then((data) => resolve(Object.values(data)))
-//     .catch(reject);
-// });
-
-// ### GET VOCABULARY FROM DB
+// ### GET VOCABULARY ITEMS FROM DB BY UID
 const getVocabulary = (uid) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/vocabulary.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
@@ -33,19 +21,7 @@ const getVocabulary = (uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-// const filterByLangTech = (language) => new Promise((resolve, reject) => {
-//   fetch(`${endpoint}/vocabulary.json?orderBy="langTech"&equalTo="${language}"`, {
-//     method: 'GET',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//   })
-//     .then((response) => response.json())
-//     .then((data) => resolve(Object.values(data)))
-//     .catch(reject);
-// });
-
-// ### FILTER CARDS BY LANGUAGE
+// ### FILTER VOCAB CARDS BY LANGUAGE
 const filterByLangTech = (language, uid) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/vocabulary.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
@@ -61,6 +37,7 @@ const filterByLangTech = (language, uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+//  ADD NEW VOCAB ITEM
 const createVocabulary = (payload) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/vocabulary.json`, {
     method: 'POST',
@@ -74,6 +51,7 @@ const createVocabulary = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// UPDATE VOCAB ITEM
 const updateVocabulary = (payload) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/vocabulary/${payload.firebaseKey}.json`, {
     method: 'PATCH',
@@ -87,9 +65,37 @@ const updateVocabulary = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// DELETE VOCAB ITEM
+const deleteVocabulary = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabulary/${firebaseKey}.json`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
+// GET VOCAB ITEM
+const getVocabItem = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabulary/${firebaseKey}.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
 export {
   getVocabulary,
   filterByLangTech,
   createVocabulary,
   updateVocabulary,
+  deleteVocabulary,
+  getVocabItem
 };

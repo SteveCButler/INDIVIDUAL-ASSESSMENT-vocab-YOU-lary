@@ -6,7 +6,8 @@ import showVocab from '../pages/showVocab';
 const formEvents = (uid) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
-    if (e.target.id.includes('submit-card')) {
+    if (e.target.id.includes('submit-card-form')) {
+      console.warn('submit');
       const d = new Date();
       const hour = d.getHours();
       const minutes = d.getMinutes();
