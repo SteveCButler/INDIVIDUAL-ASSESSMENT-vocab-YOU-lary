@@ -1,11 +1,15 @@
 import loginButton from '../components/loginButton';
 import renderToDom from '../utils/renderToDom';
+import logo from '../assets/vocabularry.png';
 
 const splash = () => {
   document.querySelector('#login-form-container').innerHTML = '';
   const domString = `
-    <h1 class="display-3">Welcome to Vocab-YOU-lary!</h1>
+  <div id="splash">
+    <h1 class="splashText">Welcome to </h1> 
+   <img id="splashLogo" src=${logo}>
     <div id="login-button"><div>
+    </div>
     `;
   renderToDom('#login-form-container', domString);
   loginButton();

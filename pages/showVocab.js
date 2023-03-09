@@ -11,7 +11,7 @@ const showVocab = (array) => {
     <div class="card-body ">
       <h5 class="card-title">${item.title}</h5>
       <hr>
-      <p class="card-text">${item.definition}</p>
+      <p class="card-text-color">${item.definition}</p>
       <button class="btn"><i id="edit-book-btn--${item.firebaseKey}" class="fas fa-edit"></i></button>
       <button class="btn"><i id="delete-book-btn--${item.firebaseKey}" class="fas fa-trash-alt"></i></button>
       <hr>

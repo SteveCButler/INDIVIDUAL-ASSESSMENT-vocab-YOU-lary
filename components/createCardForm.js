@@ -7,11 +7,11 @@ const createCardForm = (uid, obj = {}) => {
   const domString = ` 
      <form id="${obj.firebaseKey ? `updateVocabItem--${obj.firebaseKey}` : 'submit-card-form'}" class="mb-4">
       <div class="form-group">
-        <label for="title">Title</label>
+        <!-- <label for="title">Title</label> -->
         <input type="text" class="form-control" id="title" placeholder="Title" value="${obj.title || ''}" required>
       </div>
       <div class="form-group">
-        <label for="definition">Definition</label>
+        <!-- <label for="definition">Definition</label> -->
         <input type="text" class="form-control" id="definition" placeholder="Definition" value="${obj.definition || ''}" required>
       </div>
       <div class="form-group p-5">
