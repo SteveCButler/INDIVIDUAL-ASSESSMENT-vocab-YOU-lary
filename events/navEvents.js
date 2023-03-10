@@ -2,7 +2,7 @@ import createCardForm from '../components/createCardForm';
 import clearDom from '../utils/clearDom';
 import filterButtons from '../components/filterButtons';
 import { getVocabulary } from '../api/vocabRequests';
-import showVocab from '../pages/showVocab';
+import { showVocab } from '../pages/showVocab';
 import { signOut } from '../utils/auth';
 import clearDomOnLogout from '../utils/clearDomOnLogout';
 
