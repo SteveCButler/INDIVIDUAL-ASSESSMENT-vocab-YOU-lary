@@ -2,7 +2,6 @@ import renderToDom from '../utils/renderToDom';
 import clearDom from '../utils/clearDom';
 
 const createCardForm = (uid, obj = {}) => {
-  console.warn(obj);
   clearDom();
   document.querySelector('#filterButtonContainer').innerHTML = '';
   const formTitle =

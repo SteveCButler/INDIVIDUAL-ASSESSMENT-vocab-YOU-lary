@@ -1,5 +1,5 @@
 import { getVocabulary, deleteVocabulary, getVocabItem } from '../api/vocabRequests';
-import showVocab from '../pages/showVocab';
+import { showVocab } from '../pages/showVocab';
 import createCardForm from '../components/createCardForm';
 
 const domEvents = (uid) => {

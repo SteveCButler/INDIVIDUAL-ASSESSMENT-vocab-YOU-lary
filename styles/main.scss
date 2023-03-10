@@ -22,7 +22,7 @@ nav {
   background-color: #0093af;
 }
 nav img {
-  width: 80px;
+  width: 130px;
   height: 60px;
   border-radius: 10px;
 }
@@ -53,15 +53,25 @@ nav img {
 .move-down {
   align-self: flex-end;
 }
+.card-title {
+  background-color: #0093af;
+  color: white;
+  font-size: 1.25em;
+}
 .card-text-color {
   color: #98817b;
 }
 .custom-subtitle-color {
   color: #0093af;
 }
+.card-btn {
+  width: 2.5em;
+}
 button {
   color: #fff;
-  background-color: #98817b;
+  font-weight: 700;
+  background-color: #a6acaf;
+  width: 8em;
   border: none;
   border-radius: 5px;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
@@ -71,4 +81,8 @@ button:active {
   top: 2px;
   left: 1px;
   box-shadow: none;
+}
+#noVocabImage {
+  margin: 3em 0;
+  opacity: 0.25;
 }

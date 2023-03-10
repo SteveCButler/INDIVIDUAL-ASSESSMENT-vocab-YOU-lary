@@ -1,7 +1,7 @@
 import logoutButton from '../components/logoutButton';
 import { getVocabulary } from '../api/vocabRequests';
 import buildDom from '../pages/buildDom';
-import showVocab from '../pages/showVocab';
+import { showVocab } from '../pages/showVocab';
 import navBar from '../components/navBar';
 import filterButtons from '../components/filterButtons';
 import filterEvents from '../events/filterEvents';

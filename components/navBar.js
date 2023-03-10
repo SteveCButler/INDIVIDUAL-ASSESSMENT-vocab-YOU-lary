@@ -1,5 +1,5 @@
 import renderToDOM from '../utils/renderToDom';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/large_logo.jpg';
 
 const navBar = () => {
   const domString = `
