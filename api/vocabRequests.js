@@ -97,5 +97,5 @@ export {
   createVocabulary,
   updateVocabulary,
   deleteVocabulary,
-  getVocabItem
+  getVocabItem,
 };
