@@ -9,15 +9,13 @@ const formEvents = (uid) => {
 
     // EVENT FOR ADDING VOCAB ITEM
     if (e.target.id.includes('submit-card-form')) {
-      const submitTime = new Date().toLocaleString();
-      const [dateValue, timeValue] = submitTime.split(',');
+      const submitTime = Date.now();
       const payload = {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
         langTech: document.querySelector('#languageSelect').value,
-        date: `${dateValue}`,
-        time: `${timeValue}`,
         uid: `${uid}`,
+        submitTime,
       };
       createVocabulary(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
@@ -29,7 +27,6 @@ const formEvents = (uid) => {
 
     // EVENT FOR UPDATING VOCAB ITEM
     if (e.target.id.includes('updateVocabItem')) {
-      console.warn('submit');
       const [, firebaseKey] = e.target.id.split('--');
       const payload = {
         title: document.querySelector('#title').value,
